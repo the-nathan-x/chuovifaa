@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Get your product listed</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="style/index.css">
+    <script src="js/list.js"></script>
+
+
+    <script src="js/index.js"></script>
+</head>
+
+
+<body>
+    
+    <nav class="navbar navbar-light bg-light">
+        <img src="img/spendless.PNG" class="logo">
+ 
+
+ 
+    
+  <button class="navbar-toggler" type="button" data-toggle="collapse" id="myBtn" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    </nav>
+
+
+    
+
+
+      
+    <form>
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">Your name</label>
+            <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="FirstName LastName">
+            <span class="badge bg-danger" id="name_e"></span>
+          </div>
+          
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          <span class="badge bg-danger" id="email_e"></span>
+        </div>
+        
+        <div class="form-group">
+          <label for="exampleInputPassword1">Phone number</label>
+          <input type="text" class="form-control" id="mobile" placeholder="07********">
+          <span class="badge bg-danger"id="phonenumber_e"></span>
+        </div>
+        
+        
+        <div class="form-group">
+            <label for="exampleInputEmail1">Product name</label>
+            <input type="text" class="form-control" id="product"  placeholder="example: cooking stove">
+            <span class="badge bg-danger" id="product_e"></span>
+          </div>
+          
+
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Number of products in stock</label>
+            <select class="form-control" id="number">
+              <option value="0">0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            <span class="badge bg-danger" id="number_e"></span>
+          </div>
+
+
+
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Short product description</label>
+            <textarea class="form-control" id="description" rows="3"></textarea>
+            <span class="badge bg-danger" id="description_e"></span>
+        </div>
+
+        
+
+          <div class="form-group">
+            <label for="exampleFormControlFile1">Upload a picture of the product</label>
+            <input type="file" class="form-control-file" id="file">
+            <span class="badge bg-danger" id="file_e"></span>
+          </div>
+
+
+         
+        <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="agree">
+            <label class="form-check-label" for="exampleCheck1">Agree to terms and conditions</label>
+            <span class="badge bg-danger" id="agree_e"></span>
+          </div>
+
+
+        <button type="button" class="btn btn-primary" onclick="validate()">Submit</button>
+
+
+      </form>
+
+   
+
+
+      
+
+
+
+
+      <footer class="bg-light text-center text-lg-start">
+        <div class="container p-4">
+          
+          <div class="row">
+            
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+              <h5 class="text-uppercase">SPENDLESS</h5>
+      
+              <button type="button" class="btn btn-primary">
+                <span class="badge badge-light">Contact Us</span>
+              </button>
+            </div>
+       
+      
+       
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+              <h5 class="text-uppercase">2022</h5>
+      
+              <button type="button" class="btn btn-primary">
+                 <span class="badge badge-light">FAQ</span>
+              </button>
+              
+            </div>
+       
+          </div>
+          
+       
+        </div>
+       
+      
+      
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2022 Copyright: Spendless
+        </div>
+       
+      </footer>
+
+
+       <!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+
+    <table>
+       
+
+      
+      <tr>
+        <td><a href="index.html"><button type="button" class="btn btn-primary">
+          Home <span class="badge badge-light"></span>
+        </button></a></td>
+    </tr>
+
+        <tr>
+            <td><a href="admin/pages/examples/login.html"><button class="btn btn-primary">
+              Login <span class="badge badge-light"></span>
+            </button></a></td>
+        </tr>
+        <tr>
+            <td>
+              <button type="button" class="btn btn-primary" id="close">
+                Close <span class="badge badge-light"></span>
+              </button>
+        </tr>
+    </table>
+
+    
+      
+    
+  </div>
+
+</div>
+
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    document.getElementById("close").onclick = function() {
+      modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    
+    </script>
+
+
+
+
+
+
+    <script src="js/bootstrap.js"></script>
+</body>
+
+
+</html>
